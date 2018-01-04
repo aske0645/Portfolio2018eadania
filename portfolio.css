@@ -1,0 +1,1709 @@
+ body {
+    background-color: lightgray;
+}
+/*overordnet for alle html siderne*/
+
+
+/*alle indstillinger til nav bar i header*/
+nav {
+    text-align:center;
+    background-color: gray;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+    list-style: none;
+    width: 100%;
+    overflow-x: hidden;
+}
+nav li {
+    display:inline-block;
+   
+}
+
+
+/*definition af størrelse, mellemrum og underskrift på link*/ 
+nav li a {
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+
+/*det der sker når markøeren er over et tab*/
+nav li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+}
+
+
+/*farver til de forskellige tabs*/
+#fag {
+    background-color: lightgrey;
+    margin-top: 10px;
+    border-bottom: solid;
+}
+
+#forside {
+    background-color: black;
+    color: white;
+}
+
+#fag2 {
+    background-color: black;
+    color: white;
+}
+
+#fag3 {
+    background-color: black;
+    color: white;
+}
+
+#portfolio {
+    background-color: black;
+    color: white;
+}
+
+#projekt {
+    background-color: black;
+    color: white;
+}
+
+#virksomhed {
+    background-color: slateblue;
+    color: white;
+}
+
+#kommunikation {
+    background-color: slateblue;
+    color: white;
+}
+
+#interaktion {
+    background-color: slateblue;
+    color: white;
+}
+
+#design {
+    background-color: slateblue;
+    color: white;
+}
+/*nav bar indstillinger slutter her*/
+
+
+
+/*her starter mit grid til forsiden "pagewrap"*/
+/*#oversigt virker på hele siden*/
+#oversigt {
+    grid-area: a;
+}
+/*#oversigt slutter*/
+
+
+#mig {
+    grid-area: b;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#mig2 {
+    border: solid;
+}
+
+#hvemerjeg {
+    grid-area: c;  
+}
+
+#pagewrap {
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a a a a a a"
+        ". c c c b b"
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    #pagewrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-areas: 
+        "a a a a" 
+        "c c c c"
+        "b b b b" 
+    }
+    
+    #mig {
+        margin-top: 0px;
+    }
+    
+    #mig2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #hvemerjeg {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    #pagewrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a a a a" 
+        "c c b b" 
+    }
+    
+    #mig {
+        overflow-x: hidden;
+    }
+    
+    #hvemerjeg {
+        text-align: center;      
+    }
+}
+/*forsiden slutter*/
+
+
+/*pagewrap til siden fag forsiden starter*/
+/*de fire tekstbokse på siden fag*/
+#virksomhedskasse {
+    grid-area: b;
+    text-align: center;
+    border: solid;
+    padding-bottom: 5px;
+    background-color: lightgray;
+}
+
+#kommunikationskasse {
+    grid-area: c;
+    text-align: center;
+    border: solid;
+    background-color: lightgray;
+    padding-bottom: 5px;
+}
+
+#interaktionskasse {
+    border: solid;
+    grid-area: d;
+    text-align: center;
+    background-color: lightgray;
+}
+
+#designkasse {
+    border: solid;
+    grid-area: e;
+    text-align: center;
+    background-color: lightgray;
+}
+/*de fire tekstbokse*/
+
+
+/*footer*/
+#bundlinje {
+    color: white;
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    grid-area:f;
+}
+/*footer*/
+
+
+#pagewrap2 {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a a"
+    "b b d d"
+    "c c e e"
+    "f f f f"    
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    #pagewrap2 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-areas: 
+        "a a a a" 
+        "b b b b"
+        "c c c c"
+        "d d d d"
+        "e e e e"
+        "f f f f"
+    }
+    
+    #designkasse {
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+    #pagewrap2 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a a a a"
+        "b b d d"
+        "c c e e"
+        "f f f f"
+    }
+}
+/*pagewrap til fag forsiden slutter*/
+
+
+
+/*scrollbar virker til hele siden*/ 
+.scrollbar {
+    display: block;
+    list-style-type: none;
+    padding: 5px; 
+    border: solid;
+    position: fixed;
+    text-align: center;
+    background-color: gray;
+}
+
+#bar {
+    grid-area: b;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+}
+
+.scroll {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+/*scrollbar*/
+
+
+/*pagewrap til virksomheden starter*/
+#virkoverskrift1 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: over1;
+}
+
+#copy {
+    grid-area: copyright;
+}
+
+#opensource {
+    grid-area: open;
+}
+
+#virkoverskrift2 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: over2;
+}
+
+#creativec {
+    grid-area: cc;
+    text-align: center;
+}
+
+#creativec img {
+    border: solid;
+    width: 100%;
+}
+
+#ophavsret {
+    grid-area: ophav;
+}
+
+#marked {
+    grid-area: mark;
+}
+
+#patentlov {
+    grid-area: patent;
+}
+
+#brugsmodel {
+    grid-area: brug;
+}
+
+#designlov {
+    grid-area: design;
+}
+
+#virkoverskrift3 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: over3;
+}
+
+#scrummetode {
+    grid-area: scrum;
+}
+
+#scrummetode img {
+    border: solid;
+    width: 100%;
+}
+
+#vandfald {
+    grid-area: vand;
+}
+
+#vandfald img {
+    width: 100%;
+    border: solid;
+}
+
+#virkoverskrift4 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: over4;
+}
+
+#prototyping {
+    grid-area: proto;
+}
+
+#virkoverskrift5 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: over5;
+}
+
+#vision {
+    grid-area: vis;
+}
+
+#omverdensmodel {
+    grid-area: omverden;
+}
+
+#omverdensmodel img {
+    width: 100%;
+    border: solid;
+}
+
+#swotanalyse {
+    grid-area: swot;
+}
+
+#bmcanvas {
+    grid-area: bmc;
+}
+
+#bmcanvas img {
+    width: 100%;
+    border: solid;
+}
+
+#pagewrap3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a"
+    "b over1 ."
+    "b copyright ."
+    "b open ."
+    "b cc ."
+    "b over2 ."
+    "b ophav ."
+    "b mark ."
+    "b patent ."
+    "b brug ."
+    "b design ."
+    "b over3 ."
+    "b scrum ."
+    "b vand ."
+    "b over4 ."
+    "b proto ."
+    "b over5 ."
+    "b vis ."
+    "b omverden ."
+    "b swot ."
+    "b bmc ."
+    "f f f" 
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    #pagewrap3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+    "a a"
+    "b over1"
+    "b copyright"
+    "b open"
+    "b cc"
+    "b over2"
+    "b ophav"
+    "b mark"
+    "b patent"
+    "b brug"
+    "b design"
+    "b over3"
+    "b scrum"
+    "b vand"
+    "b over4"
+    "b proto"
+    "b over5"
+    "b vis"
+    "b omverden"
+    "b swot"
+    "b bmc"
+    "f f" 
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+    #pagewrap3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "over1"
+        "copyright"
+        "open"
+        "cc"
+        "over2"
+        "ophav"
+        "mark"
+        "patent"
+        "brug"
+        "design"
+        "over3"
+        "scrum"
+        "vand"
+        "over4"
+        "proto"
+        "over5"
+        "vis"
+        "omverden omverden"
+        "swot"
+        "bmc"
+        "f"
+    }
+    
+    .scrollbar {
+        display: none;
+    }
+    
+    header {
+        overflow-x: hidden;
+    }
+    
+    #virkoverskrift1, #virkoverskrift2, #virkoverskrift3, #virkoverskrift4, #virkoverskrift5 {
+        font-size: 17px;
+    }
+    
+}
+/*pagewrap til virksomheden slutter*/
+
+
+/*pagewrap til kommunikation starter*/
+#komoverskrift1 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: kover1;
+}
+
+#begreber {
+    grid-area: begreb;
+}
+
+#mediegenrer {
+    grid-area: medie;
+}
+
+#komoverskrift2 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: kover2;
+}
+
+#storytelling {
+    grid-area: story;
+}
+
+#desyvarketyper {
+    grid-area: syvark;
+}
+
+#appelformer {
+    grid-area: appel;
+}
+
+#komoverskrift3 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: kover3;
+}
+
+#idegen {
+    grid-area: ide;
+}
+
+#idegen img {
+    width: 100%;
+    border: solid;
+}
+
+#komoverskrift4 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: kover4;
+}
+
+#questions {
+    grid-area: que;
+}
+
+#dennyebollemodel {
+    grid-area: dnbm;
+}
+
+#dennyebollemodel img {
+    width: 100%;
+    border: solid;
+}
+
+#komoverskrift5 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: kover5;
+}
+
+#storyboard {
+    grid-area: board;
+}
+
+#storyboard img {
+    width: 100%;
+    border: solid;
+}
+
+#sketching {
+    grid-area: sketch;
+}
+
+#sketching img {
+    width: 100%;
+    border: solid;
+}
+
+
+#pagewrap4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a"
+    "b kover1 ."
+    "b begreb ."
+    "b medie ."
+    "b kover2 ."
+    "b story ."
+    "b syvark ."
+    "b appel ."
+    "b kover3 ."
+    "b ide ."
+    "b kover4 ."
+    "b que ."
+    "b dnbm ."
+    "b kover5 ."
+    "b board ."
+    "b sketch ."
+    "f f f"
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+    #pagewrap4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a a "
+        "b kover1"
+        "b begreb"
+        "b medie"
+        "b kover2"
+        "b story"
+        "b syvark"
+        "b appel"
+        "b kover3"
+        "b ide"
+        "b kover4"
+        "b que"
+        "b dnbm"
+        "b kover5"
+        "b board"
+        "b sketch"
+        "f f"
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 550px) {
+    #pagewrap4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "kover1"
+        "begreb"
+        "medie"
+        "kover2"
+        "story"
+        "syvark"
+        "appel"
+        "kover3"
+        "ide"
+        "kover4"
+        "que"
+        "dnbm"
+        "kover5"
+        "board"
+        "sketch"
+        "f"
+    }
+
+    header {
+        overflow-x: hidden;
+    }
+
+    #komoverskrift1, #komoverskrift2, #komoverskrift3, #komoverskrift4, #komoverskrift5 {
+        font-size: 15px;
+    }
+
+}
+/*pagewrap til kommunikation slutter*/
+
+
+/*pagewrap til interaktionsudvikling starter*/
+#intoverskrift1 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: iover1;
+}
+
+#webbet {
+    grid-area: web;
+}
+
+#serverogklient {
+    grid-area: server;
+}
+
+#serverogklient img {
+    width: 100%;
+    border: solid;
+}
+
+#intoverskrift2 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: iover2;
+}
+
+#hyper {
+    grid-area: kode;
+}
+
+#hyper img {
+    border: solid;
+    width: 100%
+}
+
+#semantisketags {
+    grid-area: semantik;
+}
+
+#metatags {
+    grid-area: meta;
+}
+
+#validator {
+    grid-area: vali;
+}
+
+#intoverskrift3 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: iover3;
+}
+
+#styleshe {
+    grid-area: styles;
+}
+
+#styleshe img {
+    border: solid;
+    width: 100%;
+}
+
+#cssgrids {
+    grid-area: gris;
+}
+
+#cssgrids img {
+    width: 100%;
+    border: solid;
+}
+
+#intoverskrift4 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: iover4;
+}
+
+#breakpoints {
+    grid-area: br;
+}
+
+#breakpoints img {
+    border: solid;
+    width: 100%
+}
+
+#intoverskrift5 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: iover5;
+}
+
+#frameworks {
+    grid-area: frame;
+}
+
+#bootstrap {
+    grid-area: boot;
+}
+
+#intoverskrift6 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: iover6;
+}
+
+#versionsstyring {
+    grid-area: version;
+}
+
+#github {
+    grid-area: git;
+}
+
+#pagewrap5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a"
+    "b iover1 ."
+    "b web ."
+    "b server ."
+    "b iover2 ."
+    "b kode ."
+    "b semantik ."
+    "b meta ."
+    "b vali ."
+    "b iover3 ."
+    "b styles ."
+    "b gris ."
+    "b iover4 ."
+    "b br ."
+    "b iover5 ."
+    "b frame ."
+    "b boot ."
+    "b iover6 ."
+    "b version ."
+    "b git ."
+    "f f f"
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+    #pagewrap5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a a"
+        "b iover1"
+        "b web"
+        "b server"
+        "b iover2"
+        "b kode"
+        "b semantik"
+        "b meta"
+        "b vali"
+        "b iover3"
+        "b styles"
+        "b gris"
+        "b iover4"
+        "b br"
+        "b iover5"
+        "b frame"
+        "b boot"
+        "b iover6"
+        "b version"
+        "b git"
+        "f f"
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 550px) {
+    #pagewrap5 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "iover1"
+        "web"
+        "server"
+        "iover2"
+        "kode"
+        "semantik"
+        "meta"
+        "vali"
+        "iover3"
+        "styles"
+        "gris"
+        "iover4"
+        "br"
+        "iover5"
+        "frame"
+        "boot"
+        "iover6"
+        "version"
+        "git"
+        "f"
+    }
+    
+    #intoverskrift1, #intoverskrift2, #intoverskrift3, #intoverskrift4, #intoverskrift5, #intoverskrift6 {
+        font-size: 18px;
+    }
+    
+    #bar {
+        display: none;
+    }
+}
+/*pagewrap til interaktionsudvikling slutter*/
+
+
+/*pagewrap til design og visualisering starter*/
+#deoverskrift1 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: deover1;
+}
+
+#farvepsy {
+    grid-area: psy;
+}
+
+#farvehjul {
+    grid-area: hjul;
+}
+
+#farvehjul img {
+    border: solid;
+    width: 80%;
+}
+
+#lyshed {
+    grid-area: lys;
+}
+
+#farverum {
+    grid-area: rum;
+}
+
+#deoverskrift2 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: deover2;
+}
+
+#typobegreber {
+    grid-area: typ;
+}
+
+#fontfont {
+    grid-area: fonts;
+}
+
+#deoverskrift3 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: deover3;
+}
+
+#gestalt {
+    grid-area: lov;
+}
+
+#gestalt img {
+    width: 100%;
+    border:solid;
+}
+
+#deoverskrift4 {
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: deover4;
+}
+
+#photoshop {
+    grid-area: photo;
+}
+
+#illustrator {
+    grid-area: ill;
+}
+
+#indesign {
+    grid-area: ind;
+}
+
+#pagewrap6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "a a a"
+    "b deover1 ."
+    "b psy ."
+    "b hjul ."
+    "b lys ."
+    "b rum ."
+    "b deover2 ."
+    "b typ ."
+    "b fonts ."
+    "b deover3 ."
+    "b lov ."
+    "b deover4 ."
+    "b photo ."
+    "b ill ."
+    "b ind ."
+    "f f f"
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+    #pagewrap6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a a"
+        "b deover1"
+        "b psy"
+        "b hjul"
+        "b lys"
+        "b rum"
+        "b deover2"
+        "b typ"
+        "b fonts"
+        "b deover3"
+        "b lov"
+        "b deover4"
+        "b photo"
+        "b ill"
+        "b ind"
+        "f f"
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 550px) {
+    #pagewrap6 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "deover1"
+        "psy"
+        "hjul"
+        "lys"
+        "rum"
+        "deover2"
+        "typ"
+        "fonts"
+        "deover3"
+        "lov"
+        "deover4"
+        "photo"
+        "ill"
+        "ind"
+        "f"
+    }
+    
+    #deoverskrift1, #deoverskrift2, #deoverskrift3, #deoverskrift4 {
+        font-size: 18px;
+    }
+    
+    #bar {
+        display: none;
+    }
+   
+    header {
+        overflow-x: hidden;
+    }
+}
+/*pagewrap til design og visualisering slutter*/
+
+
+/*pagewrap til opgaver starter*/
+#introoverskrift {
+    grid-area: starten;
+    width: 100%;
+    height: 80%;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0  auto;
+}
+
+#firstdaywithhtml {
+    grid-area: code;
+    border-bottom: solid;
+}
+
+#helloworld {
+    grid-area: hw;
+}
+
+#helloworld img {
+    width: 80%;
+    float: right;
+}
+
+#minwebside {
+    grid-area: webside;
+    border-bottom: solid;
+}
+
+#firstsite {
+    grid-area: fs;
+}
+
+#firstsite img {
+    float: right;
+    width: 80%;
+}
+
+#gridtekst {
+    grid-area: gridt;
+    border-bottom: solid;
+}
+
+#gridcode {
+    grid-area: gridkode;
+}
+
+#gridcode img {
+    width: 80%;
+    float: right;
+}
+
+#gridlayout {
+    grid-area: gridlook;
+}
+
+#gridlayout img {
+    width: 80%;
+    float: right;
+}
+
+
+
+#frontertekst {
+    grid-area: front;
+    border-bottom: solid;
+}
+
+
+
+
+#skicomputer {
+    grid-area: skic;
+}
+
+#skicomputer img {
+    width: 80%;
+    float: right;
+}
+
+#skimobil {
+    grid-area: skim;
+}
+
+#skimobil img {
+    width: 50%;
+    float: right;
+}
+
+#skitablet {
+    grid-area: skit;
+}
+
+#skitablet img {
+    width: 50%;
+    float: right;
+}
+
+#computer {
+    grid-area: pc;
+}
+
+#computer img {
+    width: 80%;
+    float: right;
+}
+
+#tablet {
+    grid-area: tab;
+}
+
+#tablet img {
+    width: 50%;
+    float: right;
+}
+
+#mobil {
+    grid-area: mob;
+}
+
+#mobil img {
+    width: 50%;
+    float: right;
+}
+
+#farvetekst {
+    grid-area: farvet;
+    border-bottom: solid;
+}
+
+#farvemodel {
+    grid-area: cirkel;
+}
+
+#farvemodel img {
+    float: right;
+    width: 80%;
+}
+
+#lysh {
+    grid-area: ly;
+}
+
+#lysh img {
+    float: right;
+    width: 80%;
+}
+
+#tegning {
+    grid-area: tegntekst;
+    border-bottom: solid;
+}
+
+#sketching1 {
+    grid-area: sketch1;
+}
+
+#sketching1 img {
+    float: right;
+    width: 80%;
+}
+
+#sketching2 {
+    grid-area: sketch2;
+}
+
+#sketching2 img {
+    float: right;
+    width: 80%;
+}
+
+#sketching3 {
+    grid-area: sketch3;
+}
+
+#sketching3 img {
+    float: right;
+    width: 80%;
+}
+
+#sketching4 {
+    grid-area: sketch4;
+}
+
+#sketching4 img {
+   float: right;
+    width: 80%; 
+}
+
+
+
+#photoshopopg {
+    grid-area: shop;
+    border-bottom: solid;
+}
+
+#clover {
+    grid-area: clo;
+}
+
+#clover img {
+    float: right;
+    width: 80%;
+}
+
+
+#randersfc {
+    grid-area: randers;
+}
+
+#randersfc img {
+    width: 80%;
+    float: right;
+}
+
+#illstekst {
+    grid-area: illtekst;
+    border-bottom: solid;
+}
+
+#solb {
+    grid-area: sol;
+}
+
+#solb img {
+    width: 80%;
+    float: right;
+}
+
+#heineken {
+    grid-area: beer;
+    border-bottom: solid;
+}
+
+#brochure {
+    grid-area: bro;
+}
+
+#brochure img {
+    float: right;
+    width: 80%;
+}
+
+#ideamaking {
+    grid-area: idea;
+    border-bottom: solid;
+}
+
+#mindmap {
+    grid-area: mind;
+}
+
+#mindmap img {
+    width: 80%;
+    float: right;
+}
+
+#circlewritting {
+    grid-area: circles;
+}
+
+#circlewritting img {
+    float: right;
+    width: 80%;
+}
+
+#medietekster {
+    grid-area: media;
+    border-bottom: solid;
+}
+
+#cociotekst {
+    grid-area: cocio; 
+    border-bottom: solid;
+}
+
+#scrumboard {
+    grid-area: scrumb;
+}
+
+#scrumboard img {
+    width: 80%;
+    float: right;
+}
+
+#onepage {
+    grid-area: one;
+} 
+
+#onepage img {
+    width: 80%;
+    float: right;
+}
+
+#designprincipper {
+    grid-area: principper;
+}
+
+#ruleofthirds {
+    grid-area: thirds;
+}
+
+#ruleofthirds img {
+    width: 80%;
+    float: right;
+}
+
+#similarity {
+    grid-area: simi;
+}
+
+#similarity img {
+    width: 80%;
+    float: right;
+}
+
+#figureground {
+    grid-area: figure;
+}
+
+#figureground img {
+    width: 80%;
+    float: right;
+}
+
+#pagewrap7 {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a a"
+    "starten starten"
+    "code hw"
+    "webside fs"
+    "gridt gridkode"
+    "gridt gridlook"
+    "front skic"
+    "front skit"
+    "front skim"
+    "front pc"
+    "front tab"
+    "front mob"
+    "farvet cirkel"
+    "farvet ly"
+    "tegntekst sketch1"
+    "tegntekst sketch2"
+    "tegntekst sketch3"
+    "tegntekst sketch4"
+    "shop randers"
+    "shop clo"
+    "illtekst sol"
+    "beer bro"
+    "idea mind"
+    "idea circles"
+    "media ."
+    "cocio scrumb"
+    "cocio one"
+    "principper thirds"
+    "principper simi"
+    "principper figure"
+    "f f"
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+    #pagewrap7 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a a"
+        "starten starten"
+        "code hw"
+        "webside fs"
+        "gridt gridkode"
+        "gridt gridlook"
+        "front skic"
+        "front skit"
+        "front skim"
+        "front pc"
+        "front tab"
+        "front mob"
+        "farvet cirkel"
+        "farvet ly"
+        "tegntekst sketch1"
+        "tegntekst sketch2"
+        "tegntekst sketch3"
+        "tegntekst sketch4"
+        "shop randers"
+        "shop clo"
+        "illtekst sol"
+        "beer bro"
+        "idea mind"
+        "idea circles"
+        "media ."
+        "cocio scrumb"
+        "cocio one"
+        "principper thirds"
+        "principper simi"
+        "principper figure"
+        "f f"
+    }
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 550px) {
+    #pagewrap7 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a" 
+        "starten"
+        "code" 
+        "hw"
+        "webside" 
+        "fs"
+        "gridt" 
+        "gridkode"
+        "gridlook"
+        "front" 
+        "skic"
+        "skit"
+        "skim"
+        "pc"
+        "tab"
+        "mob" 
+        "farvet" 
+        "cirkel"
+        "ly"
+        "tegntekst" 
+        "sketch1"
+        "sketch2"
+        "sketch3"
+        "sketch4"
+        "shop" 
+        "randers"
+        "clo"
+        "illtekst" 
+        "sol"
+        "beer" 
+        "bro"
+        "idea" 
+        "mind"
+        "circles"
+        "media"
+        "cocio" 
+        "scrumb"
+        "one"
+        "principper" 
+        "thirds"
+        "simi"
+        "figure"
+        "f"
+    }
+    
+    #firstdaywithhtml, #minwebside, #gridtekst, #frontertekst, #farvetekst, #tegning, #photoshopopg, #illstekst, #heineken, #ideamaking, #medietekster, #cociotekst {
+        border-bottom: none;
+    }
+    
+    #helloworld img, #firstsite img, #gridcode img, #gridlayout img, #skicomputer img, #skimobil img, #skitablet img, #computer img, #tablet img, #mobil img, #farvemodel img, #lysh img, #sketching1 img, #sketching2 img, #sketching3 img, #sketching4 img, #clover img, #randersfc img, #solb img, #brochure img, #mindmap img, #circlewritting img, #scrumboard img, #onepage img, #ruleofthirds img, #similarity img, #figureground img {
+        float: none;
+        width: 100%;
+    }
+    
+    #figureground img {
+        margin-bottom: 50px;
+    }
+}    
+/*pagewrap til opgaver slutter*/    
+
+
+/*pagewrap til min portfolio starter*/
+#port {
+    width: 100%;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: por;
+}
+
+#valgstruktur {
+    grid-area: struktur;
+}
+
+#valgdesign {
+    grid-area: vdesign;
+    
+}
+
+#arbejdsproces {
+    grid-area: arbejd;
+}
+
+#anderledes {
+    grid-area: ander;
+}
+
+#learning {
+    grid-area: learn;
+    width: 100%;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#learnvirksomhed {
+    grid-area: learnvirk;
+}
+
+#learninteraktion {
+    grid-area: learninter;
+}
+
+#learnkommunikation {
+    grid-area: learnkom;
+}
+
+#learndesignog {
+    grid-area: learndesign;
+}
+
+#minudvikling {
+    grid-area: udvikling;
+}
+
+#pagewrap8 {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a a"
+    "por por"
+    "struktur vdesign"
+    "arbejd ander"
+    "learn learn"
+    "learnvirk learninter"
+    "learnkom learndesign"
+    "udvikling ."
+    "f f"    
+}
+    
+    
+
+
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+    #pagewrap8 {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a a"
+        "por por"
+        "struktur vdesign"
+        "arbejd ander"
+        "learn learn"
+        "learnvirk learninter"
+        "learnkom learndesign"
+        "udvikling ."
+        "f f"  
+    }
+}
+    
+
+@media only screen and (min-width: 0px) and (max-width: 550px) {
+    #pagewrap8 {
+        display: grid;
+        grid-gap: none;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a" 
+        "por"
+        "struktur" 
+        "vdesign"
+        "arbejd" 
+        "ander"
+        "learn"
+        "learnvirk" 
+        "learninter"
+        "learnkom" 
+        "learndesign"
+        "udvikling"
+        "f"  
+    }
+}
+/*pagewrap til min portfolio slutter*/
